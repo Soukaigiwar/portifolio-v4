@@ -11,7 +11,3 @@ app.get("/", (req, res, next) => {
     `Seja bem vindo ao VPS rodando Node.JS pelo Docker na porta ${port}`
   );
 });
-
-app.get("/cdfs", (req, res, next) => {
-  res.json(["Gabriel Fróes", "Vanessa Weber"]);
-});
