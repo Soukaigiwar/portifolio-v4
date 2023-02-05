@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header, footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: monospace;
+	color: white;
+}
+
+footer {
+	height: 10vh;
+	background-color: black;
+}
+
+header {
+	height: 30vh;
+	color: black;
+	font-size: 20px;
+	gap: 20px;
+	padding: 20px;
+	transition: .8s;
+}
+
+header p {
+	align-items: flex-end;
+}
+
+.content {
+	display: flex;
+	align-items: flex-end;
+	color: white;
+}
+
+.content {
+	height: 800vh;
+	font-size: 30px;
+
+	background-image: url(../img/night_sky.jpg),
+		linear-gradient(
+		180deg, 
+		rgb(0, 0, 0) 0%,
+		rgb(0, 0, 0) 40%,
+		rgb(101, 176, 241)
+		);
+		
+	background-repeat: no-repeat;
+	background-size: contain; 
+}
+
+.content li {
+	margin-left: 25px;
+	width: 400px;
+	height: 300px;
+	font-size: 20px;
+	list-style: none;
+	transition: .8s;
+	font-family: monospace;
+}
+
+.content li p {
+	display: flex;
+	width: 400px;
+}
+
+.thumbnail {
+	width: 300px;
+	margin-top: 20px;
+	border-radius: 10px;
+	transition: .8s;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+#foguete {
+	font-size: 200px;
+}
+
+.foguete {
+	position: fixed;
+	bottom: 130px;
+	left: 65%;
+	transition: .8s;
+}
+.foguete img {
+	height: 450px;
+}
+
+@media (max-width: 480px) /* pequeno */
+{
+	header {
+		font-size: 12px;
+		gap: 10px;
+		padding: 10px;
+	}
+
+	.content li {
+		margin-left: 10px;
+		width: 200px;
+		font-size: 16px;
+	}
+
+	.thumbnail {
+		width: 180px;
+	}
+
+	.foguete {
+		position: fixed;
+		bottom: 130px;
+		left: 200px;
+	}
+}
+
+@media (min-width: 800px) /* grande */
+{
+	header {
+		font-size: 25px;
+		gap: 35px;
+		padding: 35px;
+	}
+
+	.content li {
+		margin-left: 40px;
+		width: 500px;
+		font-size: 30px;
+		margin-top: 100px;
+	}
+
+	.thumbnail {
+		width: 400px;
+	}
+
+	.foguete {
+		position: fixed;
+		bottom: 130px;
+		left: 600px;
+	}
+}
