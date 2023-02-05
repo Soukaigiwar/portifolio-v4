@@ -1,6 +1,6 @@
-import { Modal, ShowResult } from './Modal.js'
-import { CalculateIMC } from './Tools.js'
-import { CheckIfWrongEntry } from './Errors.js'
+import { Modal, ShowResult } from './modal.js'
+import { CalculateIMC } from './tools.js'
+import { CheckIfWrongEntry } from './errors.js'
  
 // Capture elements
 const form = document.querySelector('form')
