@@ -1,9 +1,9 @@
 {
-  "name": "api-basicona",
+  "name": "api-portifolio",
   "version": "1.0.0",
-  "description": "API Basicona para mostrar o uso do Docker",
+  "description": "API para expor dados do portifolio.",
   "main": "app/app.js",
-  "author": "Gabriel Froes",
+  "author": "Gabriel Froes, Sergio Mello",
   "license": "MIT",
   "scripts": {
     "start": "node app/app.js"
