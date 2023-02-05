@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --bg-main: white;
+    --bg-controls: #393232;
+    --fg-timer: #323238;
+    --bg-themes-icon: #393232;
+    --bg-range: white;
+    --bg-themes-button: #E1E1E6;
+    --bg-themes-button-hover: #00c2fd; 
+    --bg-themes-button-selected: #00a7da;
+    --fg-themes-button: #323238;
+    --fg-themes-button-selected: white;
+    
+    font-size: 62.5%;
+}
+
+.dark_theme {
+    
+    --bg-main: black;
+    --bg-controls: white;
+    --fg-timer: white;
+    --bg-themes-icon: white;
+    --bg-range: white;
+    --bg-themes-button: #29292E;
+    --bg-themes-button-hover: #6db153; 
+    --bg-themes-button-selected: #3d7726;
+    --fg-themes-button: white;
+    --fg-themes-button-selected: white;
+}
+
+body {
+    display: flex;
+
+    background: var(--bg-main);
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+	height: 100vh;
+    align-items: start;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    
+    justify-content: end;
+    align-items: start;
+    position: fixed;
+    
+}
+
+.buttonNight, .buttonDay {
+    background: transparent;
+    cursor: pointer;
+    margin: 6rem;
+    z-index: 999;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
+    margin-top: 19.6rem;
+}
+
+.timer_container {
+    justify-self: center;
+    align-self: center;
+}
+
+.timer_container .timer span{
+
+    z-index: -999;
+    font-size: 12.6rem;
+    align-items: center;
+    
+    color: var(--fg-timer);
+}
+
+.timer_container .timer_controls {
+    display: flex;
+    justify-content:space-between;
+}
+
+.themes_container {
+    display: grid;
+    grid-template-areas: "A B" "C D";
+    gap: 3.2rem;
+}
+
+.button, button{
+    cursor: pointer;
+    border: none;
+}
+
+.forest,
+.rain,
+.coffee,
+.fireplace {
+    width: 13.8rem;
+    height: 15.2rem;
+    padding: 2.4rem 4.7rem;
+    
+    background: var(--bg-themes-button);
+    border-radius: 2.4rem;
+    position: relative;
+}
+
+button svg path {
+    /* fill: var(--bg-controls); */
+    fill: var(--bg-themes-icon)
+}
+
+.timer_controls .button svg path {
+    fill: var(--bg-controls);
+}
+
+button:hover input[type="range"]::-webkit-slider-thumb,
+button:hover input[type="range"]::-webkit-slider-runnable-track,
+button:hover svg path {
+    fill: var(--bg-main);
+    background: var(--bg-main);
+}
+
+button:hover {
+    background: var(--bg-themes-button-hover);
+}
+
+.volumeControl{
+    position: absolute;
+    left: 2.4rem;
+    bottom: 2.4rem;
+    width: 9rem;
+    cursor: pointer;
+}
+
+input[type="range"],
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    height: .4rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: -0.6rem;
+}
+
+.hide {
+    display: none;
+}
+
+.selected {
+    background: var(--bg-themes-button-selected);
+}
+
+.selected svg path,
+.selected input[type="range"]::-webkit-slider-thumb,
+.selected input[type="range"]::-webkit-slider-runnable-track {
+    fill: var(--fg-themes-button-selected);
+    background: var(--bg-range);
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-webkit-slider-runnable-track {
+    fill: var(--fg-themes-button);
+    background: var(--fg-themes-button);
+}

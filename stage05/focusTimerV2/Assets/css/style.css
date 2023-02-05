@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --base-color: 240;
+    --bg-main: white;
+    --bg-controls: hsl(var(--base-color), 6%, 21%);
+    --fg-timer: #323238;
+    --bg-themes-button: #E1E1E6;
+    --bg-themes-button-selected: #02799D;
+    --fg-themes-button: #323238;
+    --fg-themes-button-selected: white;
+    ;
+
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+
+    background: var(--bg-main);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
+}
+
+.timer_container {
+    justify-self: center;
+    align-self: center;
+}
+
+.timer_container .timer span{
+    font-size: 12.6rem;
+    align-items: center;
+    
+    color: var(--fg-timer);
+}
+
+.timer_container .timer_controls {
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.button svg path {
+    fill: var(--bg-controls);
+}
+
+.themes_container {
+    display: grid;
+    grid-template-areas: "A B" "C D";
+    gap: 3.2rem;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.forest,
+.rain,
+.coffee,
+.fireplace {
+    width: 13.8rem;
+    height: 15.2rem;
+    padding: 4.8rem 4.3rem;
+
+    background: var(--bg-themes-button);
+    border-radius: 2.4rem;
+}
+
+.hide {
+    display: none;
+}
+
+.selected {
+    background: var(--bg-themes-button-selected);
+}
+
+.selected svg path {
+    fill: var(--fg-themes-button-selected);
+}

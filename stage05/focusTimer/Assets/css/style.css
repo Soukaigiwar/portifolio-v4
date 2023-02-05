@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --base-color: 192;
+    --bg-main: #121214;
+    --bg-controls-light: hsla(var(--base-color), 100%, 63%, 0.13);
+    --bg-controls: hsl(var(--base-color), 100%, 63%);
+    --fg-timer: white;
+
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    background: var(--bg-main);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: flex-end;
+    align-items: center;
+    
+    gap: 1.6rem; 
+}
+
+.timer {
+    font-weight: 700;
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    line-height: 10.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: var(--fg-timer);
+
+    display: flex;
+}
+
+.timer_controls {
+    background: var(--bg-controls-light);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2.2rem 4rem;
+    gap: clamp(1.5rem, .1rem + 5vw, 3.2rem);
+    
+    width: clamp(10rem, 12rem + 30vw, 22.8rem);
+    height: clamp(8rem, 5rem + 10vh, 10.8rem);
+    
+    border-radius: 9999px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button svg {
+    width: clamp(6.4rem, 1rem + 6vw, 6.4rem);
+}
+
+.button_play svg path,
+.button_pause svg path,
+.button_unmute svg path{
+    fill: var(--bg-controls);
+}
+
+.muted_unmuted {
+    position: grid;
+    justify-self: end;
+    align-self: end;
+    padding: 4rem 3.2rem;
+    /* right: 4.0rem;
+    bottom: 3.2rem; */
+}
+
+.hide {
+    display: none;
+}
